@@ -2,6 +2,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
 import Login from "../Component/button/Login"
+import Signup from "./button/Signup";
 
 const Header = () => {
     return (
@@ -31,6 +32,7 @@ const Header = () => {
                     </div>
                     <NavLink className="navbar-brand mx-auto fw-bold" to="/">APPLE MART</NavLink>
                     <Login/>
+                    <Signup/>
 
                 </div>
             </nav>
