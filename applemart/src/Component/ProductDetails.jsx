@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import { useParams } from 'react-router-dom'
 import DATA from '../Data';
 const ProductDetails = () => {
@@ -7,6 +8,15 @@ const ProductDetails = () => {
     const proDetail = DATA.filter(x => x.id == proid.id)
     const product = proDetail[0]
     console.log(product)
+
+    const[btnText,setBtnText]=useState("Add To Cart")
+    const handleCart=(product)=>{
+        if(btnText=="Add To Cart"){
+            setBtnText("Remove From Cart")
+        }else{
+            setBtnText("Add To Cart")
+        }
+    }
     return (
 
         <>
@@ -21,7 +31,7 @@ const ProductDetails = () => {
                     <hr />
                     <h2 className='my-4'>{product.price}</h2>
                     <p className='lead'>{product.desc}</p>
-                <button className='btn btn-outline-primary my-5'>Add To Cart</button>
+                <button onClick={()=>handleCart(product)} className='btn btn-outline-primary my-5'>{btnText}</button>
                 </div>
             </div>
         </>
