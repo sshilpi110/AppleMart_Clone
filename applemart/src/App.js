@@ -7,6 +7,7 @@ import About from "./Component/About"
 import Product from "./Component/Product"
 import Contact from "./Component/Contact"
 import { Route, Routes } from "react-router-dom"
+import ProductDetails from './Component/ProductDetails';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/product" element={<Product />} />
+        <Route exact path="/product/:id" element={<ProductDetails />} />
+
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
