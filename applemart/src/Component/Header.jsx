@@ -3,6 +3,7 @@ import React from "react"
 import { NavLink } from "react-router-dom";
 import Login from "../Component/button/Login"
 import Signup from "./button/Signup";
+import CartBuy from "./button/CartBuy";
 
 const Header = () => {
     return (
@@ -28,11 +29,12 @@ const Header = () => {
                             </li>
 
                         </ul>
-
-                    </div>
                     <NavLink className="navbar-brand mx-auto fw-bold" to="/">APPLE MART</NavLink>
                     <Login/>
                     <Signup/>
+                    <CartBuy/>
+
+                    </div>
 
                 </div>
             </nav>
